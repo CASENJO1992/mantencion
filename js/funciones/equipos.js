@@ -29,6 +29,7 @@ function load(page){
       var caracteristicas = button.data('caracteristicas') // Extraer la información de atributos de datos
       var imagen = button.data('imagen')
       var img = button.data('img')
+      var estado = button.data('estado')
 
       var modal = $(this)
       modal.find('.modal-title').text('Editar : '+nombre)
@@ -41,6 +42,7 @@ function load(page){
       modal.find('.modal-body #img').attr("src", imagen)
       modal.find('.modal-body #img').val(img)
       modal.find('.modal-body #img-edit').val('')
+      modal.find('.modal-body #estado').val(estado)
       $('.selectpicker').selectpicker('refresh');
       $('.alert').hide();//Oculto alert
     })
